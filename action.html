@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="zxx">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Action</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./W3.CSS_Template_files/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+    <style>
+      body,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: "Lato", sans-serif;
+      }
+
+      body,
+      html {
+        height: 100%;
+        color: #777;
+        line-height: 1.8;
+      }
+
+      /* Create a Parallax Effect */
+      .bgimg-1,
+      .bgimg-2,
+      .bgimg-3 {
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      /* First image (Logo. Full height) */
+      .bgimg-1 {
+        background-image: url('./W3.CSS_Template_files/film-012.jpg');
+        height: 500px;
+      }
+
+      /* Second image (Portfolio) */
+      .bgimg-2 {
+        background-image: url("./W3.CSS_Template_files/swpic.jpg");
+        min-height: 400px;
+      }
+
+      /* Third image (Contact) */
+      .bgimg-3 {
+        background-image: url("./W3.CSS_Template_files/parallax3.jpg");
+        min-height: 400px;
+      }
+
+      .w3-wide {
+        letter-spacing: 10px;
+      }
+
+      .w3-hover-opacity {
+        cursor: pointer;
+      }
+
+      /* Turn off parallax scrolling for tablets and phones */
+      @media only screen and (max-width: 1600px) {
+
+        .bgimg-1,
+        .bgimg-2,
+        .bgimg-3 {
+          background-attachment: scroll;
+          min-height: 400px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar (sit on top) -->
+    <div class="w3-top">
+      <div class="w3-bar" id="myNavbar">
+        <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+          <i class="fa fa-bars"></i>
+        </a>
+        <a href="index.html" class="w3-bar-item w3-button">HOME</a>
+        <a href="About.html" class="w3-bar-item w3-button w3-hide-small">
+          <i class="fa fa-user"></i> ABOUT </a>
+        <a href="action.html" class="w3-bar-item w3-button w3-hide-small">
+          <i class="fa fa-th"></i> ACTION </a>
+        <a href="scifi.html" class="w3-bar-item w3-button w3-hide-small">
+          <i class="fa fa-th"></i> SCIFI </a>
+        <a href="nonfiction.html" class="w3-bar-item w3-button w3-hide-small">
+          <i class="fa fa-th"></i> NON-FICTION </a>
+        <a href="contact.html" class="w3-bar-item w3-button w3-hide-small">
+          <i class="fa fa-envelope"></i> CONTACT </a>
+      </div>
+      <!-- Navbar on small screens -->
+      <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+        <a href="About.html" class="w3-bar-item w3-button" onclick="toggleFunction()">ABOUT</a>
+        <a href="action.html" class="w3-bar-item w3-button" onclick="toggleFunction()">ACTION</a>
+        <a href="scifi.html" class="w3-bar-item w3-button" onclick="toggleFunction()">SCIFI</a>
+        <a href="nonfiction.html" class="w3-bar-item w3-button" onclick="toggleFunction()">NON-FICTION</a>
+        <a href="contact.html" class="w3-bar-item w3-button" onclick="toggleFunction()">CONTACT</a>
+      </div>
+    </div>
+    <!-- Container (Portfolio Section) -->
+    <div class="w3-content w3-container w3-padding-64" id="portfolio">
+      <h3 class="w3-center">Action Movie Reviews</h3>
+      <h4 class="w3-center">Click on movie poster image to see full review.</h4>
+      <div class="w3-row-padding w3-center"></div>
+      <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
+      <div class="w3-row-padding w3-center ">
+        <div class="w3-col m3">
+          <img src="./W3.CSS_Template_files/bmpic.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="The Batman (2022) is a triumphant return to the gritty roots of the iconic caped crusader. Robert Pattinson's portrayal of Bruce Wayne brings a refreshing complexity to the character, blending brooding intensity with vulnerability. Director Matt Reeves masterfully crafts a dark and atmospheric Gotham City, with stunning cinematography and a haunting score that immerses the audience in the shadows. The supporting cast, including standout performances from Zoe Kravitz and Paul Dano, adds depth to the narrative. The film's gripping detective story, coupled with its visually stunning presentation, makes The Batman a must-watch for both fans and newcomers alike. It's a thrilling and engaging take on the beloved superhero that leaves a lasting impact." height="300">
+          <div class="w3-light-grey w3-padding-16">
+            <p class="w3-wide">
+              <i class="fa fa-camera"></i>Movie Meter
+            </p>
+            <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:90%">90%</div>
+            <h4>
+              <a href="https://www.imdb.com/title/tt1877830/ratings/?ref_=tt_ov_rt">See other professional reviews</a>
+            </h4>
+          </div>
+        </div>
+        <div class="w3-col m3">
+          <img src="./W3.CSS_Template_files/capic.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Captain America: The Winter Soldier is a standout Marvel film that seamlessly combines gripping action with a compelling narrative. Chris Evans delivers a stellar performance as Captain America, and the Russo brothers infuse the movie with an espionage-inspired tone, elevating it beyond typical superhero fare. The introduction of the Winter Soldier adds depth, and Scarlett Johansson's Black Widow shines. With tight pacing, engaging plot twists, and a perfect blend of character development and action, this film is a triumph that resonates with both fans and casual viewers alike." height="300">
+          <div class="w3-light-grey w3-padding-16">
+            <p class="w3-wide">
+              <i class="fa fa-camera"></i>Movie Meter
+            </p>
+            <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:90%">90%</div>
+            <h4>
+              <a href="https://www.imdb.com/title/tt1843866/ratings/?ref_=tt_ov_rt">See other professional reviews</a>
+            </h4>
+          </div>
+        </div>
+        <div class="w3-col m3">
+          <img src="./W3.CSS_Template_files/fxpic.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Fast X zooms past its predecessors, but not in a good way. The film, although boasting the signature high-octane action of the franchise, lacks the substance that made earlier installments memorable. The plot feels more like an excuse for elaborate stunts than a coherent narrative, leaving character development in the dust. Even the charismatic cast struggles to salvage the script's shortcomings. With a formulaic plot and a reliance on spectacle over substance, Fast X speeds down a disappointing path, leaving fans longing for the days when the franchise had more to offer than just flashy cars and explosions." height="300">
+          <div class="w3-light-grey w3-padding-16">
+            <p class="w3-wide">
+              <i class="fa fa-camera"></i>Movie Meter
+            </p>
+            <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:45%">45%</div>
+            <h4>
+              <a href="https://www.imdb.com/title/tt5433140/ratings/?ref_=tt_ov_rt">See other professional reviews</a>
+            </h4>
+          </div>
+        </div>
+        <div class="w3-col m3">
+          <img src="./W3.CSS_Template_files/cbpic.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Cocaine Bear takes a wild and unconventional premise and runs with it, offering a unique cinematic experience that is sure to leave audiences entertained and perplexed. The film embraces its absurdity with a mix of humor and unexpected twists, and the performances, particularly from the bear itself, are surprisingly engaging. While the narrative may struggle to maintain a consistent tone, the sheer audacity of the concept and the commitment of the cast make Cocaine Bear an offbeat and memorable ride for those looking for something outside the mainstream." height="300">
+          <div class="w3-light-grey w3-padding-16">
+            <p class="w3-wide">
+              <i class="fa fa-camera"></i>Movie Meter
+            </p>
+            <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:60%">60%</div>
+            <h4>
+              <a href="https://www.imdb.com/title/tt14209916/ratings/?ref_=tt_ov_rt">See other professional reviews</a>
+            </h4>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Modal for full size images on click-->
+    <div id="modal01" class="w3-modal w3-black" onclick="this.style.display=&#39;none&#39;">
+      <span class="w3-button w3-large w3-black w3-display-topright" title="Close Modal Image">
+        <i class="fa fa-remove"></i>
+      </span>
+      <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+        <img src="./W3.CSS_Template_files/atsvpic.jpg" id="img01" class="w3-image" alt="h">
+        <p id="caption" class="w3-opacity w3-large"></p>
+      </div>
+    </div>
+    <!-- Third Parallax Image with Portfolio Text 
+<div class="bgimg-3 w3-display-container w3-opacity-min"><div class="w3-display-middle"><span class="w3-xxlarge w3-text-white w3-wide">CONTACT</span></div></div>
+-->
+    <!-- Footer -->
+    <footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
+      <a href="index.html" class="w3-button w3-light-grey">
+        <i class="fa fa-arrow-up w3-margin-right"></i>To the top </a>
+      <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a>
+      </p>
+    </footer>
+    <script>
+      // Modal Image Gallery
+      function onClick(element) {
+        document.getElementById("img01").src = element.src;
+        document.getElementById("modal01").style.display = "block";
+        var captionText = document.getElementById("caption");
+        captionText.innerHTML = element.alt;
+      }
+      // Change style of navbar on scroll
+      window.onscroll = function() {
+        myFunction()
+      };
+
+      function myFunction() {
+        var navbar = document.getElementById("myNavbar");
+        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+          navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
+        } else {
+          navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
+        }
+      }
+      // Used to toggle the menu on small screens when clicking on the menu button
+      function toggleFunction() {
+        var x = document.getElementById("navDemo");
+        if (x.className.indexOf("w3-show") == -1) {
+          x.className += " w3-show";
+        } else {
+          x.className = x.className.replace(" w3-show", "");
+        }
+      }
+    </script>
+  </body>
+</html>

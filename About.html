@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="zxx">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>About</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./W3.CSS_Template_files/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+    <style>
+      body,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: "Lato", sans-serif;
+      }
+
+      body,
+      html {
+        height: 100%;
+        color: #777;
+        line-height: 1.8;
+      }
+
+      /* Create a Parallax Effect */
+      .bgimg-1,
+      .bgimg-2,
+      .bgimg-3 {
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      /* First image (Logo. Full height) */
+      .bgimg-1 {
+        background-image: url('./W3.CSS_Template_files/film-012.jpg');
+        height: 500px;
+      }
+
+      /* Second image (Portfolio) */
+      .bgimg-2 {
+        background-image: url("./W3.CSS_Template_files/swpic.jpg");
+        min-height: 400px;
+      }
+
+      /* Third image (Contact) */
+      .bgimg-3 {
+        background-image: url("./W3.CSS_Template_files/parallax3.jpg");
+        min-height: 400px;
+      }
+
+      .w3-wide {
+        letter-spacing: 10px;
+      }
+
+      .w3-hover-opacity {
+        cursor: pointer;
+      }
+
+      /* Turn off parallax scrolling for tablets and phones */
+      @media only screen and (max-width: 1600px) {
+
+        .bgimg-1,
+        .bgimg-2,
+        .bgimg-3 {
+          background-attachment: scroll;
+          min-height: 400px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar (sit on top) -->
+    <div class="w3-top">
+      <div class="w3-bar" id="myNavbar">
+        <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+          <i class="fa fa-bars"></i>
+        </a>
+        <a href="index.html" class="w3-bar-item w3-button">HOME</a>
+        <a href="About.html" class="w3-bar-item w3-button w3-hide-small">
+          <i class="fa fa-user"></i> ABOUT </a>
+        <a href="action.html" class="w3-bar-item w3-button w3-hide-small">
+          <i class="fa fa-th"></i> ACTION </a>
+        <a href="scifi.html" class="w3-bar-item w3-button w3-hide-small">
+          <i class="fa fa-th"></i> SCIFI </a>
+        <a href="nonfiction.html" class="w3-bar-item w3-button w3-hide-small">
+          <i class="fa fa-th"></i> NON-FICTION </a>
+        <a href="contact.html" class="w3-bar-item w3-button w3-hide-small">
+          <i class="fa fa-envelope"></i> CONTACT </a>
+      </div>
+      <!-- Navbar on small screens -->
+      <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+        <a href="About.html" class="w3-bar-item w3-button" onclick="toggleFunction()">ABOUT</a>
+        <a href="action.html" class="w3-bar-item w3-button" onclick="toggleFunction()">ACTION</a>
+        <a href="scifi.html" class="w3-bar-item w3-button" onclick="toggleFunction()">SCIFI</a>
+        <a href="nonfiction.html" class="w3-bar-item w3-button" onclick="toggleFunction()">NON-FICTION</a>
+        <a href="contact.html" class="w3-bar-item w3-button" onclick="toggleFunction()">CONTACT</a>
+      </div>
+    </div>
+    <div class="w3-content w3-container w3-padding-64" id="about">
+      <h3 class="w3-center">ABOUT ME</h3>
+      <p class="w3-center">
+        <em>I Love Film</em>
+      </p>
+      <p>I love writing reviews on different films and shows. I mainly like to review Sci-Fi and Action movies and shows. one of my favorite all time franchises is Star Wars. Other good franchises that i enjoy incude Harry Potter, Marvel, DC, and some Anime as well. I dont reviw Sci-Fi and action, I also enjoy non-fiction works as well such as Ford v Ferrari and Oppenheimer. With all that being said welcome to my movie review website. </p>
+      <div class="w3-row"></div>
+    </div>
+    <div class="w3-row-padding w3-center w3-padding-16">
+      <h3 class="w3-center">Here's a picture of me skiing so you can put a semi-face on the reviewer.</h3>
+      <img src="./W3.CSS_Template_files/thumbnail.jpg" style="width:50%" onclick="onClick(this)" class="w3-hover-opacity" alt="Spider-Man: Across the Spider-Verse is a cinematic masterpiece that swings seamlessly between dimensions, capturing the essence of what makes Spider-Man an enduring and beloved superhero. From the breathtaking animation to the engaging storyline, this film catapults audiences into a kaleidoscope of vibrant visuals and heartwarming narratives.">
+    </div>
+    <!-- Footer -->
+    <footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
+      <a href="#home" class="w3-button w3-light-grey">
+        <i class="fa fa-arrow-up w3-margin-right"></i>To the top </a>
+      <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a>
+      </p>
+    </footer>
+    <script>
+      // Modal Image Gallery
+      function onClick(element) {
+        document.getElementById("img01").src = element.src;
+        document.getElementById("modal01").style.display = "block";
+        var captionText = document.getElementById("caption");
+        captionText.innerHTML = element.alt;
+      }
+      // Change style of navbar on scroll
+      window.onscroll = function() {
+        myFunction()
+      };
+
+      function myFunction() {
+        var navbar = document.getElementById("myNavbar");
+        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+          navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
+        } else {
+          navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
+        }
+      }
+      // Used to toggle the menu on small screens when clicking on the menu button
+      function toggleFunction() {
+        var x = document.getElementById("navDemo");
+        if (x.className.indexOf("w3-show") == -1) {
+          x.className += " w3-show";
+        } else {
+          x.className = x.className.replace(" w3-show", "");
+        }
+      }
+    </script>
+  </body>
+</html>
